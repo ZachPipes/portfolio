@@ -1,0 +1,49 @@
+{
+  "name": "Zach Pipes",
+  "title": "Software Engineer",
+  "location": "Columbia, MO",
+  "email": "zacherypipes@gmail.com",
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/ZachPipes" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/zachery-pipes/" }
+  ],
+  "summary": "[A short 2-3 sentence summary about who you are, what you focus on, and what you're looking for.]",
+  "experience": [
+    {
+      "role": "[Job Title]",
+      "organization": "[Company / Organization Name]",
+      "location": "[City, State]",
+      "start": "[Start Date]",
+      "end": "[End Date, or Present]",
+      "bullets": [
+        "[Responsibility or achievement]",
+        "[Responsibility or achievement]"
+      ]
+    },
+    {
+      "role": "[Job Title]",
+      "organization": "[Company / Organization Name]",
+      "location": "[City, State]",
+      "start": "[Start Date]",
+      "end": "[End Date, or Present]",
+      "bullets": [
+        "[Responsibility or achievement]",
+        "[Responsibility or achievement]"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Missouri University of Science and Technology",
+      "degree": "Computer Science",
+      "start": "Fall 2024",
+      "end": "Fall 2027",
+      "details": "Intro to Networking, Databases and File Structures, Algorithms, Intro to OS, Theory of CS, Data Structures, Intro to C++"
+    }
+  ],
+  "skills": [
+    { "category": "Languages", "items": ["C++", "C#", "Python", "Java"] },
+    { "category": "Frameworks & Libraries", "items": ["WPF", "pandas", "requests", "eBay", "requests"] },
+    { "category": "Certifications", "items": ["Java", "Microsoft Office"] }
+  ]
+}
