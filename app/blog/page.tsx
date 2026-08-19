@@ -9,9 +9,6 @@ export default function BlogPage() {
       <div className="mx-auto max-w-3xl px-6 py-16 sm:px-10">
         <header>
           <h1 className="text-3xl font-semibold tracking-tight">Blog</h1>
-          <p className="mt-1 text-lg text-foreground/70">
-            [A short description of what you write about here.]
-          </p>
         </header>
 
         <div className="mt-12 divide-y divide-black/[.08] dark:divide-white/[.145]">
