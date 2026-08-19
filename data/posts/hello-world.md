@@ -18,6 +18,6 @@ Every post starts with a **frontmatter** block (the part between the `---` lines
 console.log("plug and play");
 ```
 
-![Example Image](/images/hello-world-example.png)
+![Example Image](/images/hello-world/example.png)
 
 Delete this file whenever you're ready to publish your real first post.
