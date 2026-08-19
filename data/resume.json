@@ -7,28 +7,45 @@
     { "label": "GitHub", "url": "https://github.com/ZachPipes" },
     { "label": "LinkedIn", "url": "https://linkedin.com/in/zachery-pipes/" }
   ],
-  "summary": "[A short 2-3 sentence summary about who you are, what you focus on, and what you're looking for.]",
+  "summary": "",
+  "projects": [
+    {
+      "name": "fastdist",
+      "link": "https://github.com/ghosteau/fastdist",
+      "languages_and_frameworks": ["C++", "Python", "CUDA", "PyBind11"],
+      "start": "Dec 2025",
+      "end": "Present",
+      "bullets": [
+        "Accelerated computationally intensive functions using CUDA, achieving ∼ 2.5x speedups on large datasets compared to CPU implementations.",
+        "Built C++ wrappers to interface with Python, optimizing memory management and performance-critical operations.",
+        "Implemented robust testing and validation pipelines to ensure accuracy and consistency across CPU and GPU computations."
+      ]
+    }
+  ],
   "experience": [
     {
-      "role": "[Job Title]",
-      "organization": "[Company / Organization Name]",
-      "location": "[City, State]",
-      "start": "[Start Date]",
-      "end": "[End Date, or Present]",
+      "role": "Software Team - Special Projects Lead",
+      "organization": "S&T Multirotor Design Team",
+      "location": "Rolla, MO",
+      "start": "Aug 2024",
+      "end": "Present",
       "bullets": [
-        "[Responsibility or achievement]",
-        "[Responsibility or achievement]"
+        "Simulated drone flight dynamics and mapping workflows on real-world terrain data using Unreal Engine",
+        "Onboarded and mentored 5+ new team members by teaching Python, Git, and GitHub for version control and collaborative development",
+        "Configured and optimized Unreal Engine simulation environments by integrating assets, physics parameters, and control interfaces to support accurate testing scenarios",
+        "Expanding the simulation executable to support multi-drone coordination and swarm behavior testing"
       ]
     },
     {
-      "role": "[Job Title]",
-      "organization": "[Company / Organization Name]",
-      "location": "[City, State]",
-      "start": "[Start Date]",
-      "end": "[End Date, or Present]",
+      "role": "Teammate",
+      "organization": "The UPS Store",
+      "location": "Columbia, MO",
+      "start": "Nov 2021",
+      "end": "Aug 2026",
       "bullets": [
-        "[Responsibility or achievement]",
-        "[Responsibility or achievement]"
+        "Processed and shipped packages to destinations across the United States",
+        "Trained new employees on store procedures and best practices",
+        "Provided excellent customer service through answering questions, resolving issues, and providing solutions tailored to customer needs,"
       ]
     }
   ],

@@ -13,6 +13,16 @@ export default function ResumePage() {
             <a href={`mailto:${resume.email}`} className="hover:text-foreground">
               {resume.email}
             </a>
+          </div>
+
+          <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-foreground/60">
+            <a
+              href="/Zachery_Pipes_Resume.pdf"
+              download
+              className="hover:text-foreground"
+            >
+              Resume
+            </a>
             {resume.links.map((link) => (
               <a
                 key={link.label}
@@ -27,14 +37,45 @@ export default function ResumePage() {
 
         <p className="mt-8 max-w-2xl text-foreground/80">{resume.summary}</p>
 
-        <section className="mt-12 border-t border-black/[.08] pt-8 dark:border-white/[.145]">
+        <section className="mt-12 border-t border-black/8 pt-8 dark:border-white/[.145]">
+          <h2 className="text-sm font-semibold tracking-wide text-foreground/60 uppercase">
+            Projects
+          </h2>
+
+          <div className="mt-6 space-y-8">
+            {resume.projects.map((project, i) => (
+              <div key={`${project.name}-${i}`}>
+                <div className="flex flex-wrap items-baseline justify-between gap-x-4">
+                  <h3 className="font-medium">
+                    <a href={project.link} className="hover:text-foreground/70">
+                      {project.name}
+                    </a>
+                  </h3>
+                  <span className="text-sm text-foreground/60">
+                    {project.start} — {project.end}
+                  </span>
+                </div>
+                <p className="text-sm text-foreground/60">
+                  {project.languages_and_frameworks.join(", ")}
+                </p>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-foreground/80">
+                  {project.bullets.map((bullet, i) => (
+                    <li key={i}>{bullet}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-12 border-t border-black/8 pt-8 dark:border-white/[.145]">
           <h2 className="text-sm font-semibold tracking-wide text-foreground/60 uppercase">
             Experience
           </h2>
 
           <div className="mt-6 space-y-8">
-            {resume.experience.map((job) => (
-              <div key={`${job.role}-${job.organization}`}>
+            {resume.experience.map((job, i) => (
+              <div key={`${job.role}-${job.organization}-${i}`}>
                 <div className="flex flex-wrap items-baseline justify-between gap-x-4">
                   <h3 className="font-medium">
                     {job.role} · {job.organization}
@@ -54,14 +95,14 @@ export default function ResumePage() {
           </div>
         </section>
 
-        <section className="mt-12 border-t border-black/[.08] pt-8 dark:border-white/[.145]">
+        <section className="mt-12 border-t border-black/8 pt-8 dark:border-white/[.145]">
           <h2 className="text-sm font-semibold tracking-wide text-foreground/60 uppercase">
             Education
           </h2>
 
           <div className="mt-6 space-y-6">
-            {resume.education.map((edu) => (
-              <div key={`${edu.school}-${edu.degree}`}>
+            {resume.education.map((edu, i) => (
+              <div key={`${edu.school}-${edu.degree}-${i}`}>
                 <div className="flex flex-wrap items-baseline justify-between gap-x-4">
                   <h3 className="font-medium">
                     {edu.degree} · {edu.school}
@@ -76,7 +117,7 @@ export default function ResumePage() {
           </div>
         </section>
 
-        <section className="mt-12 border-t border-black/[.08] pt-8 dark:border-white/[.145]">
+        <section className="mt-12 border-t border-black/8 pt-8 dark:border-white/[.145]">
           <h2 className="text-sm font-semibold tracking-wide text-foreground/60 uppercase">
             Skills
           </h2>
@@ -88,8 +129,8 @@ export default function ResumePage() {
                   {group.category}
                 </h3>
                 <ul className="mt-2 space-y-1 text-sm">
-                  {group.items.map((item) => (
-                    <li key={item}>{item}</li>
+                  {group.items.map((item, i) => (
+                    <li key={`${item}-${i}`}>{item}</li>
                   ))}
                 </ul>
               </div>
