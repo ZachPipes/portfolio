@@ -1,11 +1,14 @@
 # Portfolio
 
-Zach Pipes's personal portfolio site, built with Next.js and Tailwind CSS.
-
-## Getting Started
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view it locally.
+### TODO
+- Get a theme going
+- Finish the home page
+- Create a favicon
+- Flesh out the résumé page more
+- Add résumé summary
+- Custom 404 page
+- Fix font
+- sitemap.xml
+- Hamburger for mobile
+- Make navbar buttons bigger
+- 

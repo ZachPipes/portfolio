@@ -60,7 +60,7 @@
   ],
   "skills": [
     { "category": "Languages", "items": ["C++", "C#", "Python", "Java"] },
-    { "category": "Frameworks & Libraries", "items": ["WPF", "pandas", "requests", "eBay", "requests"] },
+    { "category": "Frameworks & Libraries", "items": ["WPF", "pandas", "requests", "eBay"] },
     { "category": "Certifications", "items": ["Java", "Microsoft Office"] }
   ]
 }
