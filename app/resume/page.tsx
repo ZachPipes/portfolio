@@ -132,6 +132,7 @@ export default function ResumePage() {
                     {edu.start} — {edu.end}
                   </span>
                 </div>
+                <p className="text-sm text-foreground/60">GPA: {edu.gpa}</p>
                 <p className="mt-1 text-sm text-foreground/80">{edu.details}</p>
               </div>
             ))}
@@ -144,7 +145,7 @@ export default function ResumePage() {
             Skills
           </h2>
 
-          <div className="mt-6 grid gap-6 sm:grid-cols-3">
+          <div className="mt-6 grid gap-6.5 sm:grid-cols-4">
             {resume.skills.map((group) => (
               <div key={group.category}>
                 <h3 className="text-sm font-medium text-foreground/60">
