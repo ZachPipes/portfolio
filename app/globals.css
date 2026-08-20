@@ -2,28 +2,71 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --surface: oklch(0.2 0 0);
+
+  /* Accent — swap via the picker in the corner, or just hardcode one here later. */
+  --accent: oklch(0.72 0.19 152); /* green */
+  --accent-foreground: oklch(0.145 0 0);
+}
+
+:root[data-accent="blue"] {
+  --accent: oklch(0.65 0.19 255); /* blue */
+  --accent-foreground: oklch(0.145 0 0);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
+  position: relative;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse 900px 600px at 20% -10%,
+      color-mix(in oklch, var(--accent) 20%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 700px 500px at 100% 15%,
+      color-mix(in oklch, var(--accent) 12%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 800px 600px at 10% 100%,
+      color-mix(in oklch, var(--accent) 10%, transparent),
+      transparent 65%
+    );
+  background-repeat: no-repeat;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 .prose img {

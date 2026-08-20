@@ -24,7 +24,7 @@
   ],
   "experience": [
     {
-      "role": "Software Team - Special Projects Lead",
+      "role": "Software Special Projects Lead",
       "organization": "S&T Multirotor Design Team",
       "location": "Rolla, MO",
       "start": "Aug 2024",
@@ -55,12 +55,14 @@
       "degree": "Computer Science",
       "start": "Fall 2024",
       "end": "Fall 2027",
+      "gpa": "3.7",
       "details": "Intro to Networking, Databases and File Structures, Algorithms, Intro to OS, Theory of CS, Data Structures, Intro to C++"
     }
   ],
   "skills": [
     { "category": "Languages", "items": ["C++", "C#", "Python", "Java"] },
-    { "category": "Frameworks & Libraries", "items": ["WPF", "pandas", "requests", "eBay", "requests"] },
-    { "category": "Certifications", "items": ["Java", "Microsoft Office"] }
+    { "category": "Frameworks & Libraries", "items": ["WPF", "pandas", "requests", "eBay"] },
+    { "category": "Certifications", "items": ["Java", "Microsoft Office"] },
+    { "category": "Awards & Honors", "items": ["S&T Honors Academy", "Kummer Vanguard Scholars", "Dean's List"] }
   ]
 }

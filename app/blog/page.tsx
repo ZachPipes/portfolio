@@ -16,7 +16,10 @@ export default function BlogPage() {
             <article key={post.slug} className="py-8 first:pt-0">
               <div className="flex flex-wrap items-baseline justify-between gap-x-4">
                 <h2 className="font-medium">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-foreground/70">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="underline decoration-transparent underline-offset-4 transition-colors hover:decoration-accent"
+                  >
                     {post.title}
                   </Link>
                 </h2>

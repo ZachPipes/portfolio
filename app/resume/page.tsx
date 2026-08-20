@@ -1,4 +1,11 @@
 import resume from "@/data/resume.json";
+import { DownloadIcon, GitHubMark, LinkedInMark } from "@/components/icons";
+
+const linkIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+  Download: DownloadIcon,
+  GitHub: GitHubMark,
+  LinkedIn: LinkedInMark,
+};
 
 export default function ResumePage() {
   return (
@@ -10,7 +17,10 @@ export default function ResumePage() {
 
           <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-foreground/60">
             <span>{resume.location}</span>
-            <a href={`mailto:${resume.email}`} className="hover:text-foreground">
+            <a
+              href={`mailto:${resume.email}`}
+              className="underline decoration-transparent underline-offset-4 transition-colors hover:decoration-accent"
+            >
               {resume.email}
             </a>
           </div>
@@ -19,26 +29,32 @@ export default function ResumePage() {
             <a
               href="/Zachery_Pipes_Resume.pdf"
               download
-              className="hover:text-foreground"
+              className="inline-flex items-center gap-1.5 underline decoration-transparent underline-offset-4 transition-colors hover:decoration-accent"
             >
+              <DownloadIcon className="size-4" />
               Resume
             </a>
-            {resume.links.map((link) => (
-              <a
-                key={link.label}
-                href={link.url}
-                className="hover:text-foreground"
-              >
-                {link.label}
-              </a>
-            ))}
+            {resume.links.map((link) => {
+              const Icon = linkIcons[link.label];
+              return (
+                <a
+                  key={link.label}
+                  href={link.url}
+                  className="inline-flex items-center gap-1.5 underline decoration-transparent underline-offset-4 transition-colors hover:decoration-accent"
+                >
+                  {Icon && <Icon className="size-4" />}
+                  {link.label}
+                </a>
+              );
+            })}
           </div>
         </header>
 
         <p className="mt-8 max-w-2xl text-foreground/80">{resume.summary}</p>
 
         <section className="mt-12 border-t border-black/8 pt-8 dark:border-white/[.145]">
-          <h2 className="text-sm font-semibold tracking-wide text-foreground/60 uppercase">
+          <h2 className="flex items-center gap-2 text-sm font-semibold tracking-wide text-foreground/60 uppercase">
+            <span className="h-3 w-1 rounded-full bg-accent" />
             Projects
           </h2>
 
@@ -47,7 +63,10 @@ export default function ResumePage() {
               <div key={`${project.name}-${i}`}>
                 <div className="flex flex-wrap items-baseline justify-between gap-x-4">
                   <h3 className="font-medium">
-                    <a href={project.link} className="hover:text-foreground/70">
+                    <a
+                      href={project.link}
+                      className="underline decoration-transparent underline-offset-4 transition-colors hover:decoration-accent"
+                    >
                       {project.name}
                     </a>
                   </h3>
@@ -69,7 +88,8 @@ export default function ResumePage() {
         </section>
 
         <section className="mt-12 border-t border-black/8 pt-8 dark:border-white/[.145]">
-          <h2 className="text-sm font-semibold tracking-wide text-foreground/60 uppercase">
+          <h2 className="flex items-center gap-2 text-sm font-semibold tracking-wide text-foreground/60 uppercase">
+            <span className="h-3 w-1 rounded-full bg-accent" />
             Experience
           </h2>
 
@@ -96,7 +116,8 @@ export default function ResumePage() {
         </section>
 
         <section className="mt-12 border-t border-black/8 pt-8 dark:border-white/[.145]">
-          <h2 className="text-sm font-semibold tracking-wide text-foreground/60 uppercase">
+          <h2 className="flex items-center gap-2 text-sm font-semibold tracking-wide text-foreground/60 uppercase">
+            <span className="h-3 w-1 rounded-full bg-accent" />
             Education
           </h2>
 
@@ -111,6 +132,7 @@ export default function ResumePage() {
                     {edu.start} — {edu.end}
                   </span>
                 </div>
+                <p className="text-sm text-foreground/60">GPA: {edu.gpa}</p>
                 <p className="mt-1 text-sm text-foreground/80">{edu.details}</p>
               </div>
             ))}
@@ -118,11 +140,12 @@ export default function ResumePage() {
         </section>
 
         <section className="mt-12 border-t border-black/8 pt-8 dark:border-white/[.145]">
-          <h2 className="text-sm font-semibold tracking-wide text-foreground/60 uppercase">
+          <h2 className="flex items-center gap-2 text-sm font-semibold tracking-wide text-foreground/60 uppercase">
+            <span className="h-3 w-1 rounded-full bg-accent" />
             Skills
           </h2>
 
-          <div className="mt-6 grid gap-6 sm:grid-cols-3">
+          <div className="mt-6 grid gap-6.5 sm:grid-cols-4">
             {resume.skills.map((group) => (
               <div key={group.category}>
                 <h3 className="text-sm font-medium text-foreground/60">
