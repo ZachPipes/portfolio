@@ -5,10 +5,11 @@
 - Finish the home page
 - Flesh out the résumé page more
 - Add résumé summary
+- Add a "more to come" blog ending
 
 ## Blog Posts
 
-Posts live in `data/posts/` as Markdown files with frontmatter. Drop a new `.md` file into that folder and it shows up on `/blog` automatically — no code changes needed.
+Posts live in `data/posts/` as Markdown files with frontmatter. Drop a new `.md` file into that folder, and it shows up on `/blog` automatically — no code changes needed.
 
 Example post:
 

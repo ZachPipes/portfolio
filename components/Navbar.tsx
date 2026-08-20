@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { textLink } from "@/lib/styles";
 
 const links = [
   { href: "/", label: "Home" },
@@ -17,10 +18,7 @@ export default function Navbar() {
         <ul className="flex items-center gap-10 text-xl">
           {links.map((link) => (
             <li key={link.href}>
-              <Link
-                href={link.href}
-                className="underline decoration-transparent underline-offset-4 transition-colors hover:decoration-accent"
-              >
+              <Link href={link.href} className={textLink}>
                 {link.label}
               </Link>
             </li>
