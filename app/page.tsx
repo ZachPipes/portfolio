@@ -38,7 +38,13 @@ export default function Home() {
           {resume.links.map((link) => {
             const Icon = linkIcons[link.label];
             return (
-              <a key={link.label} href={link.url} className={iconLink}>
+              <a
+                key={link.label}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={iconLink}
+              >
                 {Icon && <Icon className="size-4" />}
                 {link.label}
               </a>

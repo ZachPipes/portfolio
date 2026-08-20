@@ -40,7 +40,13 @@ export default function ResumePage() {
             {resume.links.map((link) => {
               const Icon = linkIcons[link.label];
               return (
-                <a key={link.label} href={link.url} className={iconLink}>
+                <a
+                  key={link.label}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={iconLink}
+                >
                   {Icon && <Icon className="size-4" />}
                   {link.label}
                 </a>
@@ -59,7 +65,12 @@ export default function ResumePage() {
               <div key={`${project.name}-${i}`}>
                 <div className={entryRow}>
                   <h3 className="font-medium">
-                    <a href={project.link} className={textLink}>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={textLink}
+                    >
                       {project.name}
                     </a>
                   </h3>
