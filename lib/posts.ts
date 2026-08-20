@@ -13,6 +13,8 @@ export type PostMeta = {
 };
 
 export function getAllPosts(): PostMeta[] {
+  if (!fs.existsSync(postsDirectory)) return [];
+
   const filenames = fs
     .readdirSync(postsDirectory)
     .filter((filename) => filename.endsWith(".md"));
