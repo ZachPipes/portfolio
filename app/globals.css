@@ -7,13 +7,8 @@
   --foreground: #ededed;
   --surface: oklch(0.2 0 0);
 
-  /* Accent — swap via the picker in the corner, or just hardcode one here later. */
+  /* Accent — change this to re-theme the whole site. */
   --accent: oklch(0.72 0.19 152); /* green */
-  --accent-foreground: oklch(0.145 0 0);
-}
-
-:root[data-accent="blue"] {
-  --accent: oklch(0.65 0.19 255); /* blue */
   --accent-foreground: oklch(0.145 0 0);
 }
 
