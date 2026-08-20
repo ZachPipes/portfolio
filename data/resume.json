@@ -7,7 +7,8 @@
     { "label": "GitHub", "url": "https://github.com/ZachPipes" },
     { "label": "LinkedIn", "url": "https://linkedin.com/in/zachery-pipes/" }
   ],
-  "summary": "",
+  "summary": "Computer Science student at Missouri S&T (3.7 GPA, graduating Fall 2027). Focused on performance-oriented and systems-level software. Leads special projects for the S&T Multirotor Design Team, building Unreal Engine drone flight simulations and mentoring incoming members. Planning to pursue a Master's in Computer Science after graduating.",
+
   "projects": [
     {
       "name": "fastdist",

@@ -55,7 +55,7 @@ export default function ResumePage() {
           </div>
         </header>
 
-        <p className="mt-8 max-w-2xl text-foreground/80">{resume.summary}</p>
+        <p className="mt-8 max-w-5xl leading-relaxed text-foreground/80">{resume.summary}</p>
 
         <section className={sectionDivider}>
           <SectionHeading>Projects</SectionHeading>

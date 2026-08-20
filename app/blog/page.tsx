@@ -27,6 +27,13 @@ export default function BlogPage() {
             </article>
           ))}
         </div>
+
+        <div className="mt-12 rounded-lg border border-dashed border-black/15 p-8 text-center dark:border-white/20">
+          <p className="text-sm font-medium text-foreground/70">More posts coming soon</p>
+          <p className={`mt-1 ${metaText}`}>
+            Check back later for new writing.
+          </p>
+        </div>
       </div>
     </main>
   );

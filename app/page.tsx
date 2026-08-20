@@ -23,9 +23,8 @@ export default function Home() {
           {resume.name}
         </h1>
 
-        <p className="mt-6 max-w-xl text-lg text-foreground/70">
-          {resume.summary ||
-            '[A short one or two sentence introduction — add it to "summary" in data/resume.json.]'}
+        <p className="mt-6 max-w-5xl text-lg leading-relaxed text-foreground/70">
+          {resume.summary}
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
