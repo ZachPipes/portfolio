@@ -9,20 +9,6 @@
   ],
   "summary": "Computer Science student at Missouri S&T (3.7 GPA, graduating Fall 2027). Focused on performance-oriented and systems-level software. Leads special projects for the S&T Multirotor Design Team, building Unreal Engine drone flight simulations and mentoring incoming members. Planning to pursue a Master's in Computer Science after graduating.",
 
-  "projects": [
-    {
-      "name": "fastdist",
-      "link": "https://github.com/ghosteau/fastdist",
-      "languages_and_frameworks": ["C++", "Python", "CUDA", "PyBind11"],
-      "start": "Dec 2025",
-      "end": "Present",
-      "bullets": [
-        "Accelerated computationally intensive functions using CUDA, achieving ∼ 2.5x speedups on large datasets compared to CPU implementations.",
-        "Built C++ wrappers to interface with Python, optimizing memory management and performance-critical operations.",
-        "Implemented robust testing and validation pipelines to ensure accuracy and consistency across CPU and GPU computations."
-      ]
-    }
-  ],
   "experience": [
     {
       "role": "Software Special Projects Lead",
@@ -31,10 +17,24 @@
       "start": "Aug 2024",
       "end": "Present",
       "bullets": [
-        "Simulated drone flight dynamics and mapping workflows on real-world terrain data using Unreal Engine",
-        "Onboarded and mentored 5+ new team members by teaching Python, Git, and GitHub for version control and collaborative development",
-        "Configured and optimized Unreal Engine simulation environments by integrating assets, physics parameters, and control interfaces to support accurate testing scenarios",
-        "Expanding the simulation executable to support multi-drone coordination and swarm behavior testing"
+        "Directed three engineering sub-teams (9+ members) spanning flight simulation, developer tooling, and 3D terrain mapping",
+        "Led migration of the team simulator from legacy AirSim to Project AirSim, containerizing the Unreal Engine and ArduPilot SITL stack (Podman/WSL2) and restructuring it as a shared submodule serving the design team's competition codebases",
+        "Cut new-member setup from a multi-hour source build to a single pull by publishing prebuilt environment and SITL images to GitHub Container Registry behind a one-command launcher",
+        "Structured sub-team work around end-to-end feature ownership rather than by layer, giving every member hands-on work with the team's core technologies",
+        "Led onboarding for 5+ new members, training them in Python, Git submodule workflows, and containerized development environments"
+      ]
+    },
+    {
+      "role": "Software Engineer",
+      "organization": "Vortice Avionics",
+      "location": "Rolla, MO",
+      "start": "Apri 2026",
+      "end": "Present",
+      "bullets": [
+        "Developed C++ software for a UAV platform, contributing through code review and testing",
+        "Collaborated with 10+ teammates in a student-led UAV startup advancing next-generation UAV technology under active NDA",
+        "Modeled product components in Blender and produced marketing renders used in the company website and pitch decks",
+        "Evaluated candidate UAV components against Blue UAS sourcing requirements, weighing compliance against performance constraints"
       ]
     },
     {
@@ -47,6 +47,21 @@
         "Processed and shipped packages to destinations across the United States",
         "Trained new employees on store procedures and best practices",
         "Provided excellent customer service through answering questions, resolving issues, and providing solutions tailored to customer needs,"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "fastdist",
+      "link": "https://github.com/ghosteau/fastdist",
+      "languages_and_frameworks": ["C++", "Python", "CUDA", "PyBind11"],
+      "start": "Dec 2025",
+      "end": "Present",
+      "bullets": [
+        "Implemented 26 CUDA kernels accelerating 5 probability distributions and vector utilities, with a streaming executor that splits large inputs across 4 concurrent CUDA streams",
+        "Built the pybind11/NumPy wrapper layer between C++ and Python, releasing the GIL during computation and managing GPU memory through self-freeing buffer objects that are allocated once and reused across calls, replacing manual cleanup on six separate error paths",
+        "Achieved up to 57x speedup over SciPy with the C++ CPU backend alone, with CUDA kernels adding a further 2.5x over the CPU path on large inputs",
+        "Automated cross-platform wheel builds for Linux, macOS (x86_64/arm), and Windows across Python 3.10--3.14, with trusted-publishing releases to PyPI and a CI check that catches type-stub drift against a CUDA build"
       ]
     }
   ],

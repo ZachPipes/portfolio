@@ -26,7 +26,14 @@ export default function ResumePage() {
           <p className="mt-1 text-lg text-foreground/70">{resume.title}</p>
 
           <div className={`mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 ${metaText}`}>
-            <span>{resume.location}</span>
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resume.location)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={textLink}
+            >
+              {resume.location}
+            </a>
             <a href={`mailto:${resume.email}`} className={textLink}>
               {resume.email}
             </a>
@@ -58,6 +65,31 @@ export default function ResumePage() {
         <p className="mt-8 max-w-5xl leading-relaxed text-foreground/80">{resume.summary}</p>
 
         <section className={sectionDivider}>
+          <SectionHeading>Experience</SectionHeading>
+
+          <div className="mt-6 space-y-8">
+            {resume.experience.map((job, i) => (
+              <div key={`${job.role}-${job.organization}-${i}`}>
+                <div className={entryRow}>
+                  <h3 className="font-medium">
+                    {job.role} · {job.organization}
+                  </h3>
+                  <span className={metaText}>
+                    {job.start} — {job.end}
+                  </span>
+                </div>
+                <p className={metaText}>{job.location}</p>
+                <ul className={bulletList}>
+                  {job.bullets.map((bullet, i) => (
+                    <li key={i}>{bullet}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className={sectionDivider}>
           <SectionHeading>Projects</SectionHeading>
 
           <div className="mt-6 space-y-8">
@@ -83,31 +115,6 @@ export default function ResumePage() {
                 </p>
                 <ul className={bulletList}>
                   {project.bullets.map((bullet, i) => (
-                    <li key={i}>{bullet}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className={sectionDivider}>
-          <SectionHeading>Experience</SectionHeading>
-
-          <div className="mt-6 space-y-8">
-            {resume.experience.map((job, i) => (
-              <div key={`${job.role}-${job.organization}-${i}`}>
-                <div className={entryRow}>
-                  <h3 className="font-medium">
-                    {job.role} · {job.organization}
-                  </h3>
-                  <span className={metaText}>
-                    {job.start} — {job.end}
-                  </span>
-                </div>
-                <p className={metaText}>{job.location}</p>
-                <ul className={bulletList}>
-                  {job.bullets.map((bullet, i) => (
                     <li key={i}>{bullet}</li>
                   ))}
                 </ul>
