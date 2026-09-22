@@ -31,9 +31,6 @@ export default function Home() {
           <Link href="/resume" className={textLink}>
             View Resume
           </Link>
-          <Link href="/blog" className={textLink}>
-            Read the Blog
-          </Link>
           {resume.links.map((link) => {
             const Icon = linkIcons[link.label];
             return (

@@ -4,7 +4,6 @@ import { textLink } from "@/lib/styles";
 const links = [
   { href: "/", label: "Home" },
   { href: "/resume", label: "Résumé" },
-  { href: "/blog", label: "Blog" },
 ];
 
 export default function Navbar() {

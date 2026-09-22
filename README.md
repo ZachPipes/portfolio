@@ -3,7 +3,6 @@
 ### TODO
 - Finish the home page
 - Flesh out the résumé page more
-- Add a "more to come" blog ending
 
 ## Blog Posts
 
@@ -34,6 +33,6 @@ console.log("plug and play");
 ````
 
 A few notes:
-- The filename (minus `.md`) becomes the post's slug/URL — `data/posts/my-post.md` → `/blog/my-post`.
-- `date` accepts either `"YYYY-MM-DD"` or `"YYYY-MM-DDTHH:mm"` (add the time if you need to disambiguate same-day posts) — keep it quoted so it stays a plain string.
-- Images referenced in a post need to live in `public/` (e.g. `public/images/...`) and be linked with a root-relative path like `/images/...` — not a path relative to `data/posts/`.
+- The filename (minus `.md`) becomes the post's slug/URL — `data/posts/my-post.md` -> `/blog/my-post`.
+- `date` accepts either `"YYYY-MM-DD"` or `"YYYY-MM-DDTHH:mm"`.
+- Images referenced in a post need to live in `public/` (e.g. `public/images/...`) and be linked with a root-relative path like `/images/...`
